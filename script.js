@@ -15,17 +15,34 @@ else{
     grid.style.height = `${360/gridSize}px` ; 
     grid.style.width = `${360/gridSize}px` ; 
     container.appendChild(grid);
-    grid.addEventListener("mouseover", ()=> {
-        
-        grid.style.background = "black";
-
-    })
 
     const resetButton = document.querySelector("#Reset");
-    container.appendChild(resetButton);
+    buttonsAll.appendChild(resetButton);
     resetButton.addEventListener("click", ()=> {
         
         grid.style.background = "white";
+
+    })
+
+    const colorbutton = document.querySelector("#Color");
+    buttonsAll.appendChild(colorbutton);
+    colorbutton.addEventListener("click", () =>{
+
+        grid.addEventListener("mouseover", () => {
+            let colors = ['red', 'blue', 'green', 'yellow', 'cyan', 'orange'];
+            let new_color = colors[Math.floor(Math.random() * colors.length)];
+            grid.style.background = new_color;
+        })
+    })
+
+    const blackbutton = document.querySelector("#Black");
+    buttonsAll.appendChild(blackbutton);
+    blackbutton.addEventListener("click", ()=> {
+        
+        grid.addEventListener("mouseover", () => {
+
+            grid.style.background = "black";
+        })
 
     })
 
