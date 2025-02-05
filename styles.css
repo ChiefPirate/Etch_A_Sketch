@@ -20,12 +20,13 @@
     justify-content: center;
 }
 
-#Reset{
-    margin-top: 10px;
-}
-
 .grid{
     border: black 1px solid;
     background-color: white;
 } 
 
+#buttonsAll{
+    display: flex;
+    margin-top: 10px;
+    gap:10px
+}
